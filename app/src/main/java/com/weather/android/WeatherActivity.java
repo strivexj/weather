@@ -2,6 +2,7 @@ package com.weather.android;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.KeyEvent;
 
 import example.com.map.R;
 
@@ -12,4 +13,6 @@ public class WeatherActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weather);
     }
+
+
 }

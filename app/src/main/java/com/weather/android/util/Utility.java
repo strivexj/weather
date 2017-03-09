@@ -1,6 +1,7 @@
 package com.weather.android.util;
 
 import android.text.TextUtils;
+import android.util.Log;
 
 import com.weather.android.db.City;
 import com.weather.android.db.County;
@@ -49,7 +50,9 @@ public class Utility {
                     city.setCityName(cityObject.getString("name"));
                     city.setCityCode(cityObject.getInt("id"));
                     city.setProvinceId(provinceId);
+                    city.save();
                 }
+                Log.d("cwj","add all city");
                 return true;
             }catch (JSONException e){
                 e.printStackTrace();

@@ -22,6 +22,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import com.weather.android.WeatherActivity;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -84,6 +86,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         intent.setType(ContactsContract.CommonDataKinds.Phone.CONTENT_TYPE);
                         startActivityForResult(intent,0);
                         break;
+                    }
+                    case R.id.nav_mail:{
+                       Intent intent=new Intent(MainActivity.this, WeatherActivity.class);
+                        startActivity(intent);
                     }
                 }
                 //mDrawerLayout.closeDrawers();
