@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+         android:id="@+id/position_text_view"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:text="loation"
+        android:visibility="gone"
+         />
+   <com.baidu.mapapi.map.MapView
+         android:id="@+id/bmapView"
+         android:layout_width="fill_parent"
+         android:layout_height="fill_parent"
+         android:clickable="false"
+       />
+    <ImageView
+        android:id="@+id/mylocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="bottom|end"
+        android:src="@drawable/ic_my_location_black_24dp"/>
+
+  <!--  <CalendarView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></CalendarView>-->
+
+    <!--
+    <NumberPicker
+            android:id="@+id/np"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></NumberPicker>-->
+
+
+
+</LinearLayout>
