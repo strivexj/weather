@@ -3,9 +3,11 @@ package com.weather.android.util;
 import android.text.TextUtils;
 import android.util.Log;
 
+import com.google.gson.Gson;
 import com.weather.android.db.City;
 import com.weather.android.db.County;
 import com.weather.android.db.Province;
+import com.weather.android.gson.Weather;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -83,5 +85,18 @@ public class Utility {
         }
         return false;
     }
-
+    /**
+     * parse JSON date to Weather class
+     */
+    public static Weather handleWeatherResponse(String response){
+        try{
+            JSONObject jsonObject=new JSONObject(response);
+            JSONArray jsonArray=jsonObject.getJSONArray("HeWeather");
+            String weatherContent=jsonArray.getJSONObject(0).toString();
+            return new Gson().fromJson(weatherContent,Weather.class);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return null;
+    }
 }

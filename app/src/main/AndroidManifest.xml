@@ -56,13 +56,10 @@
         <service
             android:name=".example.com.furtherstudy.MusicService"
             android:enabled="true"
-            android:exported="true">
+            android:exported="true"></service>
 
-        </service>
-
-        <activity android:name="com.weather.android.WeatherActivity">
-
-        </activity>
+        <activity android:name="com.weather.android.WeatherMainActivity"></activity>
+        <activity android:name="com.weather.android.WeatherActivity"></activity>
     </application>
 
 </manifest>

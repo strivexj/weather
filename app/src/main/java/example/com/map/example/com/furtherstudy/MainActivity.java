@@ -22,7 +22,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
-import com.weather.android.WeatherActivity;
+import com.weather.android.WeatherMainActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -87,8 +87,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         startActivityForResult(intent,0);
                         break;
                     }
-                    case R.id.nav_mail:{
-                       Intent intent=new Intent(MainActivity.this, WeatherActivity.class);
+                    case R.id.weather:{
+                       Intent intent=new Intent(MainActivity.this, WeatherMainActivity.class);
                         startActivity(intent);
                     }
                 }

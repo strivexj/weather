@@ -5,6 +5,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -34,9 +35,9 @@ public class TranslateActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         ActionBar actionBar = getSupportActionBar();
-        if (actionBar != null) {
+       if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(true);
-        }
+       }
 
         original = (EditText) findViewById(R.id.original);
         translate = (TextView) findViewById(R.id.translateit);
@@ -105,4 +106,12 @@ public class TranslateActivity extends AppCompatActivity {
         });
     }
     //使用OkHttpUtil按钮有时候按了没反应
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home){
+            onBackPressed();
+        }
+        return super.onOptionsItemSelected(item);
+    }
 }

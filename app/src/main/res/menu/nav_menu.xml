@@ -11,9 +11,9 @@
         android:icon="@drawable/ic_people_white_36pt_2x"
         android:title="Friends"/>
     <item
-        android:id="@+id/nav_mail"
-        android:icon="@drawable/ic_mail_white_18pt_3x"
-        android:title="Mail"/>
+        android:id="@+id/weather"
+        android:icon="@drawable/weather"
+        android:title="Weather"/>
     <item
         android:icon="@drawable/ic_assignment_white_3x"
         android:id="@+id/task"

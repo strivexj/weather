@@ -39,6 +39,7 @@ public class PictureActivity extends AppCompatActivity {
         CollapsingToolbarLayout collapsingToolbar = (CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar);
         ImageView pictureImageView = (ImageView) findViewById(R.id.picture_image_view);
         TextView fruitContentText = (TextView) findViewById(R.id.picture_content_text);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         ActionBar actionBar = getSupportActionBar();
